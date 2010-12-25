@@ -21,7 +21,7 @@ describe PagesController do
       response.should be_success
     end
 	it "should have right title" do
-	  get 'home'
+	  get 'contact'
       response.should have_selector("title",
                     :content => "Papernote | Contact")
 	end
@@ -33,7 +33,7 @@ describe PagesController do
       response.should be_success
     end
 	it "should have right title" do
-	  get 'home'
+	  get 'about'
       response.should have_selector("title",
                     :content => "Papernote | About")
 	end
