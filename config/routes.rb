@@ -1,11 +1,14 @@
 Papernote::Application.routes.draw do
 
- match '/contact', :to => 'pages#contact'
- match '/about', :to => 'pages#about'
- root :to => 'pages#home'
+resources :users
+
+match '/signup',  :to => 'users#new'
+match '/contact', :to => 'pages#contact'
+match '/about', :to => 'pages#about'
+root :to => 'pages#home'
  
- match '/auth/:provider/callback', :to => "sessions#create"
- match '/signout' => "sessions#destroy", :as => :signout
+match '/auth/:provider/callback', :to => "sessions#create"
+match '/signout' => "sessions#destroy", :as => :signout
  
   # The priority is based upon order of creation:
   # first created -> highest priority.
