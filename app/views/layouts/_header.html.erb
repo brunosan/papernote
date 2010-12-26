@@ -1,0 +1,18 @@
+<header>
+  <logo class="round">
+  <% logo = image_tag("logo.png", :width => "60px", :alt => "Papernote", :class=> "round") %>
+  <%= link_to logo, root_path %>
+  </logo>
+  
+  <nav class="round">
+    <ul>
+      <li><%= link_to "Home", root_path %></li>
+      <% if current_user %>
+	    <li>Welcome <%= current_user.name %>!   
+		<%= link_to "Sign out", signout_path %></li>
+	  <% else %>
+	    <li><%= link_to "Facebook Sign in", "/auth/facebook" %></li>
+	  <% end %>
+	</ul>
+  </nav>
+</header>
