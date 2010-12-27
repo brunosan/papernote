@@ -1,1 +1,21 @@
-<%= @user.name %>, joined <%= time_ago_in_words(@user.created_at) %> ago.
+<table class="profile" summary="Profile information">
+  <tr>
+    <td class="main">
+      <h1>
+        Resolution list
+      </h1>
+    </td>
+	
+    <td class="sidebar round">
+      <CENTER><%= facebook_profile_for(@us) %></CENTER><br />
+	  <strong>Name</strong> <%= @user.name %><br />
+	  <strong>Member since</strong> <%= time_ago_in_words(@user.created_at) %><br />
+      <strong>Resolutions</strong> todo <br />
+	  <strong>Activity</strong> todo <br />
+	  <strong>Friends on Papernote</strong> ###<br />
+	  see your friends resolutions
+	</td>
+  </tr>
+</table>
+<p>
+
