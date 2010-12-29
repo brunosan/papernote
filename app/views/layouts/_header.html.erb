@@ -7,8 +7,10 @@
   <nav class="round">
     <ul>
       <li><%= link_to "Home", root_path %></li>
-      <% if current_user %>
-	    <li>Welcome <%= current_user.name %>!   
+	  <%=currentuser.nil?%>
+	  <%=!currentuser.nil?%>
+      <% if currentuser %>
+	    <li>Welcome <%= currentuser.name %>!   
 		<%= link_to "Sign out", signout_path %></li>
 	  <% else %>
 	    <li><%= link_to "Facebook Sign in", "/auth/facebook" %></li>
