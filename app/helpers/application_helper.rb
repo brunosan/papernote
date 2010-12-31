@@ -10,10 +10,9 @@ def title
   end
 end 
 
-private
 
 def currentuser
-  @currentuser = User.find(session[:user_id]) #if session[:user_id]
+  @currentuser = User.find(session[:user_id]) if session[:user_id]
 end
 
 

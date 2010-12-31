@@ -7,11 +7,10 @@
   <nav class="round">
     <ul>
       <li><%= link_to "Home", root_path %></li>
-	  <%=currentuser.nil?%>
-	  <%=!currentuser.nil?%>
       <% if currentuser %>
-	    <li>Welcome <%= currentuser.name %>!   
-		<%= link_to "Sign out", signout_path %></li>
+	    <li><%= link_to "Users", users_path %></li>
+	    <li>Welcome <%= link_to  currentuser.name.to_s.split(" ").first, "/users/#{session[:user_id]}" %>   
+		<%= link_to "(Sign out)", signout_path %></li>
 	  <% else %>
 	    <li><%= link_to "Facebook Sign in", "/auth/facebook" %></li>
 	  <% end %>

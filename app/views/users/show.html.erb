@@ -14,6 +14,12 @@
 	  <strong>Activity</strong> todo <br />
 	  <strong>Friends on Papernote</strong> ###<br />
 	  see your friends resolutions
+	  <br />
+	  <% if @user.id == session[:user_id] %>
+	  <strong>Delete:</strong>
+	  <%=link_to "Delete", @user, :method => :delete, :confirm => "You will delete all your user data. You sure?",
+                                :title => "Delete #{@user.name}" %>, 4ever!
+	  <% end %> 
 	</td>
   </tr>
 </table>

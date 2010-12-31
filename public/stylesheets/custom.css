@@ -58,7 +58,6 @@ nav {
   position:absolute;
  top:0;
  right:0;
- width:200px;
 }
 
 nav {
@@ -151,4 +150,14 @@ td.sidebar {
   border: 1px solid #999;
   margin-bottom: -15px;
 }
+
+ul.users {
+  margin-top: 1em;
+}
+
+.users li {
+  list-style: none;
+}
+
+
 
